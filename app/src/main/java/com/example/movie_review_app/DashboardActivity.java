@@ -9,13 +9,13 @@ import android.widget.Button;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class DashboardActivity extends Activity {
-    private Button Logout;
+    private Button logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
-        Logout = findViewById(R.id.Logout);
-        Logout.setOnClickListener(new View.OnClickListener() {
+        logout = findViewById(R.id.Logout);
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();

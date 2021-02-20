@@ -8,6 +8,7 @@ import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.telephony.PhoneNumberUtils;
 import android.text.LoginFilter;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -45,21 +46,21 @@ public class RegisterHereActivity extends AppCompatActivity {
         passwordEt2 = findViewById(R.id.password2);
         RegisterButton = findViewById(R.id.register);
         ProgressDialog = new ProgressDialog(this);
-        LogIn = findViewById(R.id.register);
+//        LogIn = findViewById(R.id.register);
         RegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Register();
             }
         });
-        LogIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(RegisterHereActivity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+//        LogIn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(RegisterHereActivity.this,MainActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
     }
     private void Register() {
         String email = emailEt.getText().toString();
@@ -92,17 +93,18 @@ public class RegisterHereActivity extends AppCompatActivity {
         ProgressDialog.setMessage("Please wait...");
         ProgressDialog.show();
         ProgressDialog.setCanceledOnTouchOutside(false);
+
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    Toast.makeText(RegisterHereActivity.this,"Successfully Registered",Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(RegisterHereActivity.this,DashboardActivity.class);
+                Log.e("Login Error", task.getResult().toString());
+                if (task.isSuccessful()) {
+                    Toast.makeText(RegisterHereActivity.this, "Successfully Registered", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(RegisterHereActivity.this, DashboardActivity.class);
                     startActivity(intent);
                     finish();
-                }
-                else{
-                    Toast.makeText(RegisterHereActivity.this,"Registration failed",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(RegisterHereActivity.this, "Registration failed", Toast.LENGTH_LONG).show();
                 }
                 ProgressDialog.dismiss();
             }

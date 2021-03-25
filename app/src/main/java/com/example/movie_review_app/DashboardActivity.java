@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -13,9 +14,8 @@ public class DashboardActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dashboard);
         logout = findViewById(R.id.Logout);
-        logout.setOnClickListener(new View.OnClickListener() {
+        logout.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
@@ -23,6 +23,7 @@ public class DashboardActivity extends Activity {
                 startActivity(intent);
                 finish();
             }
+
         });
     }
 }

@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Movie-Review-app</string>
+    <string name="textview">TextView</string>
+    <string name="rowCounttextview">TextView</string>
+    <string name="todo">TODO</string>
+    <string name="actionsettings">Settings</string>
+    <string name="namemovie">Movie Title</string>
+    <string name="moviedetails">Movie Details</string>
+    <string name="plot">Plot Synopsis</string>
+    <string name="rating">User Rating</string>
+    <string name="release">Release Date</string>
+    <string name="prefSortOrderlabel">Sort Order</string>
+    <string name="prefSortOrderKey">sortOrder</string>
+    <string name="prefMostPopular">Most Popular</string>
+    <string name="prefHighRated">Highest Rated</string>
 </resources>

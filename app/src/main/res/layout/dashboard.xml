@@ -17,6 +17,7 @@
         android:text="Log Out"
         android:textSize="20dp"
         android:textAllCaps="false"
-        android:layout_marginTop="25dp"/>
+        android:layout_marginTop="25dp"
+        android:background="@drawable/buttonimage"/>
 
 </LinearLayout>

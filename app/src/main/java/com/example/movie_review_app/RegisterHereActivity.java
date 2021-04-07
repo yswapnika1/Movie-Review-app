@@ -3,10 +3,6 @@ package com.example.movie_review_app;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.service.autofill.UserData;
-import android.telephony.PhoneNumberFormattingTextWatcher;
-import android.telephony.PhoneNumberUtils;
-import android.text.LoginFilter;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
@@ -23,9 +19,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.UserInfo;
-
-import org.w3c.dom.Text;
 
 
 public class RegisterHereActivity extends AppCompatActivity {
@@ -100,7 +93,7 @@ public class RegisterHereActivity extends AppCompatActivity {
                 Log.e("Login Error", task.getResult().toString());
                 if (task.isSuccessful()) {
                     Toast.makeText(RegisterHereActivity.this, "Successfully Registered", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(RegisterHereActivity.this, DashboardActivity.class);
+                    Intent intent = new Intent(RegisterHereActivity.this, HomeActivity.class);
                     startActivity(intent);
                     finish();
                 } else {

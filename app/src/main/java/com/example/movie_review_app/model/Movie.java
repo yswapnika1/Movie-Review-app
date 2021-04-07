@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Movie {
+public class Movie  {
     @SerializedName("poster_path")
     private String posterPath;
     @SerializedName("adult")
@@ -51,6 +51,10 @@ public class Movie {
         this.voteCount = voteCount;
         this.video = video;
         this.voteAverage = voteAverage;
+    }
+
+    public Movie(){
+
     }
     String baseImageUrl = "https://image.tmdb.org/p/w500";
 
@@ -141,4 +145,5 @@ public class Movie {
     public void setVoteAverage(Double voteAverage) {
         this.voteAverage = voteAverage;
     }
+
 }

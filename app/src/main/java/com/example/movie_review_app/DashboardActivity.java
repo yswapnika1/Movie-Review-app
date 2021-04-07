@@ -11,9 +11,11 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class DashboardActivity extends Activity {
     private Button logout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.dashboard);
         logout = findViewById(R.id.Logout);
         logout.setOnClickListener(new OnClickListener() {
             @Override
@@ -26,4 +28,11 @@ public class DashboardActivity extends Activity {
 
         });
     }
+
+    public void onBackPressed(){
+        Intent intent = new Intent(DashboardActivity.this, HomeActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 }

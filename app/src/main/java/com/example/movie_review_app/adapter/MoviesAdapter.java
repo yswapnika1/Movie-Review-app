@@ -38,6 +38,8 @@ import java.util.List;
             return new MyViewHolder(view);
         }
 
+
+
         @Override
         public void onBindViewHolder(final MyViewHolder viewHolder, int i){
              viewHolder.title.setText(movieList.get(i).getOriginalTitle() );
@@ -77,6 +79,7 @@ import java.util.List;
                             intent.putExtra("overview",clickedDataItem.getOverview());
                             intent.putExtra("vote_average",Double.toString(clickedDataItem.getVoteAverage()));
                             intent.putExtra("release_date",clickedDataItem.getReleaseDate());
+                            intent.putExtra("id", clickedDataItem.getId()); // here it was .getVideo()
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             mContext.startActivity(intent);
                             Toast.makeText(v.getContext(), "You Clicked" + clickedDataItem.getOriginalTitle(), Toast.LENGTH_SHORT).show();

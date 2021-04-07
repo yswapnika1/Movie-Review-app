@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dash_layout"
     android:orientation="vertical"
     android:gravity="center">
     <TextView
@@ -18,6 +20,7 @@
         android:textSize="20dp"
         android:textAllCaps="false"
         android:layout_marginTop="25dp"
-        android:background="@drawable/buttonimage"/>
+        android:background="@drawable/buttonback"
+        app:backgroundTint="#537E9F"/>
 
 </LinearLayout>

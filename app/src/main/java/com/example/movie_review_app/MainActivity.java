@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressDialog ProgressDialog;
     private FirebaseAuth firebaseAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
             if (task.isSuccessful()) {
                 Toast.makeText(MainActivity.this, "Login Successfull", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this, MoviesPage.class);
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
             } else {

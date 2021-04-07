@@ -13,4 +13,10 @@
     <string name="prefSortOrderKey">sortOrder</string>
     <string name="prefMostPopular">Most Popular</string>
     <string name="prefHighRated">Highest Rated</string>
+    <string name="trailer">Trailer</string>
+    <string name="prefLatest">Latest</string>
+    <string name="prefBestOfOscars">BestOfOscars</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="favorites">Favorite Movies</string>
 </resources>

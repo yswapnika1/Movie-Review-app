@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/reel"
+    android:background="@drawable/mb1"
     android:gravity="top"
     android:orientation="vertical"
     android:paddingHorizontal="35dp"
@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="50dp"
         android:text="Sign In"
         android:textColor="@color/white"
         android:textSize="45dp"
@@ -23,7 +23,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="35dp">
 
         <EditText
             android:id="@+id/email"
@@ -93,22 +93,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="40dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="105dp"
+            android:layout_marginLeft="50dp"
             android:text="New User?"
-            android:textColor="@color/white"
-            android:textSize="15dp" />
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/registerhere"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="45dp"
             android:text="Register Here"
             android:textColor="@color/white"
             android:textSize="15dp"

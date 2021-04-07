@@ -7,8 +7,7 @@
     android:background="@color/viewBg"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.movie_review_app.MoviesPage"
-    tools:shownIn="@layout/moviespage"
-    android:layout_marginTop="@dimen/activity_vertical_margin">
+    tools:shownIn="@layout/moviespage">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
